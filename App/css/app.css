@@ -22,3 +22,10 @@
     padding-right: 20px;
     padding-top: 20px;
 }
+
+
+.panel  {
+    float: right;
+    padding: 10%;
+    right: 30%;
+}
