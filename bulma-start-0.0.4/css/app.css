@@ -1,0 +1,11 @@
+/*
+// Main CSS File for App Parametre andstyling. seperate from bulma CSS file
+/*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
+
+/* Main banner CSS */
+
+.howto {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
