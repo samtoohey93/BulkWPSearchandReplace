@@ -28,25 +28,77 @@
       </div>
     </section>
    <!-- Body main after header-->
+   <input type="text">
+   <button class="add">Add</button>
+   <button class="remove">remove</button>
+   <div id="new_chq"></div>
+   <input type="hidden" value="1" id="total_chq">
+   
+
+
+
+
+
     <h2>How to use this tool:</h2>
+    
     <div class="howto">
       <h4>In the Boxes below, insert the domains present on your mixed content errors (you can also use a tool like WhyNoPadlock to scan your site to give you a log of those errors too.</h4>
     </div>
    
-
-    <div class="box">
+<!-- Domain Field One-->
+    <div class="box" style="padding-top: 5px; padding-bottom: 5px;">
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
-            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+            <img src="images/wordpress.png" alt="Image">
           </figure>
         </div>
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-              <br>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+              <textarea class="textarea" placeholder="e.g. http://notyourdomain.com"></textarea>
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item" aria-label="reply">
+                <span class="icon is-small">
+                  <i class="fas fa-reply" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="retweet">
+                <span class="icon is-small">
+                  <i class="fas fa-retweet" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="like">
+                <span class="icon is-small">
+                  <i class="fas fa-heart" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+    </div>
+
+    <!-- Add More Button-->
+    
+    <button class="button" id="more_fields" onclick="add_fields();" value="Add Another Domain"> Add Another Domain
+  </button>
+    <!-- Domain field two-->
+
+    <div class="box" style="padding-top: 5px; padding-bottom: 5px;">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="images/wordpress.png" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <textarea class="textarea" placeholder="e.g. http://notyourdomain.com"></textarea>
             </p>
           </div>
           <nav class="level is-mobile">
@@ -73,16 +125,54 @@
     </div>
 
 
+    <div class="output">
+      <h4>Now in the box below, input the primary domain you are using on Flywheel (this is the domain that you have clicked "Mark as Primary" if you arent sure on what you have selected; check your dasbboard or check out our <a href=https://getflywheel.com/wordpress-support/go-live-flywheel/> Going Live Documentation</a>.</h4>
+    </div>
+
+    <div class="box" style="padding-top: 5px; padding-bottom: 5px;">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="images/flywheel.png" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <textarea class="textarea" placeholder="Your Flywheel Primary Domain e.g. https://getflywheel.com"></textarea>
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item" aria-label="reply">
+                <span class="icon is-small">
+                  <i class="fas fa-reply" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="retweet">
+                <span class="icon is-small">
+                  <i class="fas fa-retweet" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="like">
+                <span class="icon is-small">
+                  <i class="fas fa-heart" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+    </div>
+    
+
+
+
     <!-- Footer-->
     <footer class="footer has-text-centered">
       <div class="container">
          <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
-            <p>
-              <strong class="has-text-weight-semibold">
-                <a href="https://www.npmjs.com/package/bulma-start">bulma-start@0.0.4</a>
-              </strong>
-            </p>
             <p>
               <small>
                 Source code licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>

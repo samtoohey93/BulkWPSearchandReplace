@@ -8,4 +8,17 @@
     display: block;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 20px;
+}
+
+.button {
+    display: inline;
+    position: relative;
+    padding-bottom: 25px;
+}
+.output {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
 }
