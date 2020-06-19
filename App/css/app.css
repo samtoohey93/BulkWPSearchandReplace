@@ -16,16 +16,27 @@
     position: relative;
     padding-bottom: 25px;
 }
-.output {
-    display: block;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+.outputblock{
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    padding-top: 50px;
+}
+#output {
+    width: 600px;
+}
+
+#buttonbox {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
-.panel  {
-    float: right;
-    padding: 10%;
-    right: 30%;
-}
+@media only screen and (max-width: 600px) {
+    .modal{
+        right: 250px;
+    }
+  }
