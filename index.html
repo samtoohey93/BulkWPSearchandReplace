@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulk WordPress Search & Replace</title>
+    <link rel="stylesheet" href="css/popStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <section class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <h1 class="title is-2 is-spaced">
+                Welcome to the Bulk Search & Replace tool for WordPress CLI users!
+              </h1>
+              <h2 class="subtitle is-4">
+                  This tool is built for bulk search & replaces in mind, where WP CLI is handier than any generic plugin's Search & Replace, and can be far easier, albeit indimidating to some. 
+                  The tool should provide a concise output to run on an SSH terminal that will allow you to fix a multitide of https based errors.
+              </h2>
+            </div>
+          </div>
+
+          <h2>How to use this tool:</h2>
+    
+          <div class="howto">
+            <ul>
+              <li>In the Boxes below, insert the domains present on your mixed content errors (you can also use a tool like <b><a href=https://whynopadlock.com/> WhyNoPadlock</a> </b>to scan your site to give you a log of those errors too. There are 10 fields, but you dont need to use them all.</li> 
+              <br>
+              <li>Now in the box below the mixed content domains, input the primary domain you are using on Flywheel (this is the domain that you have clicked "Mark as Primary". If you arent sure on what you have selected; check your dashboard or check out our <b><a href=https://getflywheel.com/wordpress-support/go-live-flywheel/> Going Live Documentation</a></b></li>
+              <br>
+              <li>When this is all said and done, at the very bottom; you should have a WP CLI command you can copy and paste into a terminal, that you have an active SSH connection to your WordPress site.</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- Body main after header-->
+ 
+<!-- Domain Fields (Ten in Total-->
+<div class="container" style="padding-top: 50px;">
+  <div class="columns is-multiline is-mobile">
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain One</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Two</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Three</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Four</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Five</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Six</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Seven</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Eight</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Nine</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="column is-half" style="padding-top: 5px; padding-bottom: 5px;">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/wordpress.png" alt="Image">
+            </figure>
+          </div>
+          <div class="field">
+            <label class="label is-normal">Domain Ten</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-normal" type="email" placeholder="e.g http://notmydomain.com">
+            </div>
+          </div>
+        </article>
+      </div>
+  </div>
+</div>
+
+
+<!-- Flywheel Primary Domain-->
+<div class="outputblock">
+  <div class="column is-half is-multiline" style="padding-top: 5px; padding-bottom: 5px;" id="output" style="display: block;">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="images/flywheel.png" alt="Image">
+          </figure>
+      </div>
+      <div class="field">
+        <label class="label is-normal">Your Primary Domain goes in this box (The Domain you want people to see; where traffic will go)</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-normal" type="email" placeholder="e.g https://getflywheel.com">
+        </div>
+      </div>
+    </article>
+    <!-- Output field and function modal-->
+<br>
+
+<div id="modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>Copy and Paste</strong> the following code into your SSH terminal:
+              <br>
+              wp search-replace
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<button class="button is-link is-large" id="lanuchModal">Run!</button>
+<script>
+$("#lanuchModal").click(function() {
+  $(".modal").addClass("is-active");  
+});
+
+$(".modal-close").click(function() {
+   $(".modal").removeClass("is-active");
+});
+</script>
+
+<!-- End Modal Block-->
+  </div>
+</div>
+<!-- End Output-->
+
+
+    <!-- Footer-->
+    <footer class="footer has-text-centered">
+      <div class="container">
+         <div class="columns">
+      
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <p>
+              <small>
+                Source code licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+              </small>
+            </p>
+            <p style="margin-top: 1rem;">
+              <a href="http://bulma.io">
+                <img src="made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="lib/main.js"></script>
+    <script type="text/javascript" src="dist/js/modal-fx.min.js"></script>
+
+  </body>
+</html>
